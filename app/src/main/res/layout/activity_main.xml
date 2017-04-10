@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <!--
+   包含两个部分
+    data 数据
+    以前布的局, 但布局中使用表达式来设置数据
+
+   -->
+    <data>
+        <variable
+            name="user"
+            type="com.ycy.aday15.bean.User"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.ycy.aday15.MainActivity">
+
+        <EditText
+            android:id="@+id/teach_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@={user.userName}"
+
+            />
+
+        <EditText
+            android:id="@+id/teach_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={user.passWord}"
+            />
+        <Button
+            android:id="@+id/teach_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录"
+
+            />
+    </LinearLayout>
+
+</layout>
+
